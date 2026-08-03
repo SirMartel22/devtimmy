@@ -1,0 +1,37 @@
+import type { Metadata } from "next";
+import { Inter, Archivo_Black } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const archivoBlack = Archivo_Black({
+  weight: "400",
+  variable: "--font-archivo",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "DevTimmy | Full-Stack Developer",
+  description: "Portfolio of DevTimmy - Full-Stack Developer",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${inter.variable} ${archivoBlack.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-[#0A0A0A] text-[#E5E5E5] selection:bg-[#D4AF37] selection:text-[#0A0A0A]">
+        {children}
+      </body>
+    </html>
+  );
+}
+
