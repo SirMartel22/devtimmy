@@ -59,52 +59,49 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Unclosable Natural Landscape Modal Overlay with Subtle Gradient */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 bg-gradient-to-br from-black/90 via-[#0E0C09]/90 to-black/90 backdrop-blur-md select-none">
+      {/* Unclosable Editorial Modal Overlay matching reference image */}
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/90 backdrop-blur-md select-none overflow-y-auto">
 
         {/* Subtle Ambient Gold Glow Background */}
-        <div className="absolute w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[150px] pointer-events-none" />
 
-        {/* Landscape Modal Card Container with Subtle Gradient */}
-        <div className="relative w-full max-w-3xl md:max-w-4xl bg-gradient-to-br from-[#1A1A1A] via-[#121212] to-[#0D0D0D] text-[#E5E5E5] rounded-2xl p-6 sm:p-8 md:p-12 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.8)] flex flex-col md:flex-row items-center md:items-center gap-6 sm:gap-8 md:gap-12">
+        {/* Modal Card Container with sharp corners */}
+        <div className="relative w-full max-w-4xl md:min-h-[480px] lg:min-h-[520px] bg-[#1C1C1C] text-[#E5E5E5] rounded-none pt-8 sm:pt-10 md:pt-16 lg:pt-20 px-0 pb-0 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.9)] flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8 overflow-hidden">
 
-          {/* Left Column: Avatar + Name + Role */}
-          <div className="flex flex-col items-center text-center shrink-0 w-full md:w-auto md:min-w-[210px]">
-            {/* Image with Solid #F5F5F5 Outline */}
-            <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-[#F5F5F5] shadow-xl">
+          {/* Left Column: Stacked Wordmark (DEV / TIMMY) */}
+          <div className="flex flex-col justify-start md:justify-center my-0 md:my-auto select-none w-full md:w-[48%] shrink-0 px-6 sm:px-8 md:pl-3 md:pr-0 text-left items-start">
+            <div className="flex flex-col text-left items-start">
+              <h1 className="font-display font-black tracking-[-0.085em] uppercase leading-[0.74] text-[clamp(4rem,10.5vw,7.8rem)] text-[#F5F5F0]">
+                DEV
+              </h1>
+              <h1 className="font-display font-black tracking-[-0.085em] uppercase leading-[0.74] text-[clamp(4rem,10.5vw,7.8rem)] text-[#D4AF37] -mt-[0.04em]">
+                TIMMY
+              </h1>
+            </div>
+          </div>
+
+          {/* Right Column: Subtopic (Software Developer), Paragraph & Image */}
+          <div className="flex flex-col justify-between w-full md:w-[50%] flex-1 self-stretch pt-2 md:pt-2 px-0 md:pl-8 md:pr-0">
+            {/* Top Right: Subtopic & Paragraph Text */}
+            <div className="flex flex-col gap-3 text-left px-6 sm:px-8 md:pl-0 md:pr-8 mb-6 md:mb-0">
+              <span className="text-[14px] sm:text-[16px] md:text-[18px] font-bold tracking-[0.2em] uppercase text-[#F5F5F5]">
+                Software Developer
+              </span>
+              <p className=" text-[14px] sm:text-[14px] md:text-[18px] leading-[1.45] text-[#F5F5F0] tracking-tight">
+                Thank you for stopping by. Full portfolio experience coming soon!!!
+              </p>
+            </div>
+
+            {/* Bottom Right: Image Block (Full width on mobile touching both side edges & bottom) */}
+            <div className="relative w-full h-56 sm:h-64 md:h-64 lg:h-72 mt-auto">
               <Image
                 src="/DevTimmy.jpeg"
                 alt="DevTimmy"
-                width={144}
-                height={144}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover object-top"
                 priority
               />
             </div>
-
-            {/* Name with Dev in #F5F5F5 and Timmy in Gold */}
-            <h2 className="font-display font-black text-2xl sm:text-3xl tracking-tight leading-none mt-4 mb-1">
-              <span className="text-[#F5F5F5]">Dev</span>
-              <span className="text-[#D4AF37]">Timmy</span>
-            </h2>
-
-            {/* Description in #F5F5F5 */}
-            <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[#F5F5F5]">
-              Software Developer
-            </span>
-          </div>
-
-          {/* Vertical Divider (Desktop) */}
-          <div className="hidden md:block w-[1px] self-stretch bg-white/10 shrink-0" />
-
-          {/* Horizontal Divider (Mobile) */}
-          <div className="md:hidden w-full h-[1px] bg-white/10" />
-
-          {/* Right Column: Main Caption */}
-          <div className="flex flex-col justify-center flex-1 text-center md:text-left">
-            <h3 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-[#F5F5F0] leading-tight tracking-tight">
-              &ldquo;Thank you for stopping by, full portfolio experience coming soon!!!&rdquo;
-            </h3>
           </div>
 
         </div>
@@ -112,6 +109,11 @@ export default function Home() {
     </main>
   );
 }
+
+
+
+
+
 
 
 

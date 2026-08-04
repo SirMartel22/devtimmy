@@ -21,6 +21,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "DevTimmy | Full-Stack Developer",
   description: "Portfolio of DevTimmy - Full-Stack Developer",
+  icons: {
+    icon: "/favicon2.PNG",
+    shortcut: "/favicon2.PNG",
+    apple: "/favicon2.PNG",
+  },
 };
 
 export default function RootLayout({
