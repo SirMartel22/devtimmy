@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "DevTimmy | Full-Stack Developer",
-  description: "Portfolio of DevTimmy - Full-Stack Developer",
+  description: "Full-Stack Developer || Automation || Process Optimization || AI",
   icons: {
     icon: "/favicon2.PNG",
     shortcut: "/favicon2.PNG",
