@@ -79,8 +79,8 @@ export default function AboutMe({
       </div>
 
       {/* Bottom Display Typography */}
-      <footer className="w-full flex justify-start items-start mt-auto pt-6 select-none">
-        <h1 className="font-display font-black uppercase text-black leading-[0.78] tracking-[-0.04em] text-[clamp(2.6rem,9.5vw,11.5rem)] text-left whitespace-nowrap">
+      <footer className="w-full flex justify-start md:justify-end items-start md:items-end mt-auto pt-6 select-none">
+        <h1 className="font-display font-black uppercase text-black leading-[0.78] tracking-[-0.04em] text-[clamp(2.6rem,9.5vw,11.5rem)] text-left md:text-right whitespace-nowrap">
           ABOUT ME
         </h1>
       </footer>

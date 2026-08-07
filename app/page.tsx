@@ -1,5 +1,6 @@
 import AboutMe from "./components/AboutMe";
 import Services from "./components/Services";
+import Contact from "./components/Contact";
 import { FaEnvelope, FaWhatsapp, FaXTwitter, FaFacebook, FaGithub } from "react-icons/fa6";
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
         </header>
 
         {/* Center Section — Display Wordmark */}
-        <div className="flex flex-col select-none shrink-0 my-auto py-12 lg:py-0">
+        <div className="flex flex-col select-none shrink-0 my-auto mt-16 sm:mt-20 md:mt-24 lg:mt-28 py-12 lg:py-0 mb-16 sm:mb-20 lg:mb-24">
           <h1 className="font-display font-black tracking-[-0.085em] uppercase leading-[0.74] text-[clamp(6rem,20vw,16.5rem)] text-[#525252]">
             DEV
           </h1>
@@ -95,6 +96,9 @@ export default function Home() {
 
       {/* Services Editorial Section */}
       <Services id="services" />
+
+      {/* Contact Section & Footer */}
+      <Contact id="contact" />
     </div>
   );
 }
