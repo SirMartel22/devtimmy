@@ -26,6 +26,26 @@ export const metadata: Metadata = {
     shortcut: "/favicon2.PNG",
     apple: "/favicon2.PNG",
   },
+
+  openGraph: {
+    title: "DevTimmy | Full-Stack Developer",
+    description: "Full-Stack Developer || Automation || Process Optimization || AI.",
+    url: "https://devtimmy.com",
+    siteName: "DevTimmy",
+    images: [
+      {
+        url: "/hero-og-image.PNG",
+        width: 1200,
+        height: 630,
+        alt: "DevTimmy",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-og-image.PNG"],
+  },
 };
 
 export default function RootLayout({
